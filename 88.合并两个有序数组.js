@@ -39,17 +39,11 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
-  let j = 0
-
-  for (let i = 0; i < nums2.length; i++) {
-    while (!(nums2[i] < nums1[j] || j >= m + i)) {
-      j++
+  while (n > 0) {
+    if (nums1[m - 1] >= nums2[n - 1]) {
+      nums1[n + m - 1] = nums1[--m]
+    } else {
+      nums1[n + m - 1] = nums2[--n]
     }
-
-    for (let k = nums1.length - 1; k > j; k--) {
-      nums1[k] = nums1[k - 1]
-    }
-
-    nums1[j] = nums2[i]
   }
 }
