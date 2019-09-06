@@ -43,27 +43,20 @@ const longestPalindrome = s => {
 
   for (let i = 0; i < s.length; i++) {
     cell.push([])
-
     for (let j = 0; j < s.length; j++) {
-      let beforeIndex = s.length - 1 - i
-
-      if (s[beforeIndex] === s[j]) {
+      let reverseChar = s[s.length - 1 - i]
+      if (reverseChar === s[j]) {
         if (i === 0 || j === 0) {
           cell[i][j] = 1
         } else {
           cell[i][j] = cell[i - 1][j - 1] + 1
         }
       } else {
-        cell[i][j] = 0 // 不能省略
+        cell[i][j] = 0
       }
-
       if (cell[i][j] > maxLen) {
-        let firstIndex = j - cell[i][j] + 1
-
-        if (beforeIndex === firstIndex) {
-          maxLen = cell[i][j]
-          maxEnd = j
-        }
+        maxLen = cell[i][j]
+        maxEnd = j
       }
     }
   }
