@@ -42,20 +42,10 @@
  * @param {number} n
  * @return {number}
  */
-const climbStairs = n => {
-  if (n <= 2) {
-    return n
+const climbStairs = (n, a = 1, b = 2) => {
+  if (n <= 1) {
+    return a
   }
 
-  let a = 1
-  let b = 2
-  let temp
-
-  for (let i = 3; i <= n; i++) {
-    temp = a + b
-    a = b
-    b = temp
-  }
-
-  return temp
+  return climbStairs(n - 1, b, a + b)
 }
