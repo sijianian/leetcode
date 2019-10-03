@@ -34,31 +34,30 @@
  * @return {string}
  */
 const longestPalindrome = s => {
-  if (s === '') {
+  if (!s || s.length === 0) {
     return ''
   }
-  let cell = [],
-    maxLen = 0,
-    maxEnd = 0
 
-  for (let i = 0; i < s.length; i++) {
-    cell.push([])
-    for (let j = 0; j < s.length; j++) {
-      let reverseChar = s[s.length - 1 - i]
-      if (reverseChar === s[j]) {
-        if (i === 0 || j === 0) {
-          cell[i][j] = 1
-        } else {
-          cell[i][j] = cell[i - 1][j - 1] + 1
-        }
-      } else {
-        cell[i][j] = 0
+  let res = s[0]
+  const dp = []
+
+  for (let i = s.length - 1; i >= 0; i--) {
+    dp[i] = []
+
+    for (let j = i; j < s.length; j++) {
+      if (j - i === 0) {
+        dp[i][j] = true
+      } else if (j - i === 1 && s[i] === s[j]) {
+        dp[i][j] = true
+      } else if (s[i] === s[j] && dp[i + 1][j - 1]) {
+        dp[i][j] = true
       }
-      if (cell[i][j] > maxLen) {
-        maxLen = cell[i][j]
-        maxEnd = j
+
+      if (dp[i][j] && j - i + 1 > res.length) {
+        res = s.slice(i, j + 1)
       }
     }
   }
-  return s.slice(maxEnd + 1 - maxLen, maxEnd + 1)
+
+  return res
 }
