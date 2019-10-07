@@ -32,8 +32,8 @@
 const threeSumClosest = (nums, target) => {
   nums.sort((a, b) => a - b)
 
-  let ans = nums[0] + nums[1] + nums[2]
-  let abs = Math.abs(ans - target)
+  let res = nums[0] + nums[1] + nums[2]
+  let abs = Math.abs(res - target)
 
   for (let i = 0; i < nums.length; i++) {
     let start = i + 1
@@ -43,7 +43,7 @@ const threeSumClosest = (nums, target) => {
       let sum = nums[start] + nums[end] + nums[i]
 
       if (Math.abs(sum - target) < abs) {
-        ans = sum
+        res = sum
         abs = Math.abs(sum - target)
       }
 
@@ -52,11 +52,11 @@ const threeSumClosest = (nums, target) => {
       } else if (sum < target) {
         start++
       } else {
-        return ans
+        return res
       }
     }
   }
 
-  return ans
+  return res
 }
 // @lc code=end

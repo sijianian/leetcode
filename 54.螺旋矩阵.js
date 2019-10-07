@@ -54,9 +54,10 @@ var spiralOrder = function(matrix) {
   const res = []
   const dirs = [[0, 1], [1, 0], [0, -1], [-1, 0]]
   const range = [matrix[0].length, matrix.length - 1]
-  let d = 0,
-    r = 0,
-    c = -1
+
+  let d = 0
+  let r = 0
+  let c = -1
 
   while (range[d % 2] > 0) {
     for (let i = 0; i < range[d % 2]; i++) {

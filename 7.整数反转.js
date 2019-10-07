@@ -44,14 +44,10 @@
  * @return {number}
  */
 const reverse = x => {
-  let str = x
-    .toString()
-    .split('')
-    .reverse()
-    .join('')
+  let str = x.toString().split('').reverse().join('')
   let num = parseInt(x < 0 ? `-${str}` : str)
 
-  if (num > 2147483647 || num < -2147483648) {
+  if (num > (Math.pow(2, 31) - 1) || num < Math.pow(-2, 31)) {
     return 0
   }
 

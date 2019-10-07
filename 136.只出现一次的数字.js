@@ -36,17 +36,17 @@
  * @return {number}
  */
 const singleNumber = nums => {
-  const hash = {}
+  let list = []
 
   for (let i = 0; i < nums.length; i++) {
-    hash[nums[i]] = hash[nums[i]] ? hash[nums[i]] + 1 : 1
-  }
+    let index = list.indexOf(nums[i])
 
-  for (let key in hash) {
-    if (hash[key] === 1) {
-      return key
+    if (~index) {
+      list.splice(index, 1)
+    } else {
+      list.push(nums[i])
     }
   }
 
-  return
+  return list.pop()
 }

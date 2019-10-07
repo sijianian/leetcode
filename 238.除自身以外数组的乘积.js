@@ -44,7 +44,7 @@ const productExceptSelf = nums => {
 
   prod = 1
 
-  for (let i = nums.length - 1; i > -1; i--) {
+  for (let i = nums.length - 1; i >= 0; i--) {
     res[i] *= prod
     prod *= nums[i]
   }
