@@ -42,10 +42,14 @@
  * @param {number} n
  * @return {number}
  */
-const climbStairs = (n, a = 1, b = 2) => {
-  if (n <= 1) {
-    return a
+const climbStairs = (n, hash = {}) => {
+  if (n <= 2) {
+    return n
   }
 
-  return climbStairs(n - 1, b, a + b)
+  if (!hash[n]) {
+    hash[n] = climbStairs(n - 1, hash) + climbStairs(n - 2, hash)
+  }
+
+  return hash[n]
 }
