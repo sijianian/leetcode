@@ -23,7 +23,7 @@
  *
  */
 
-// @lc code=start
+// @lc code=left
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -36,21 +36,22 @@ const threeSumClosest = (nums, target) => {
   let abs = Math.abs(res - target)
 
   for (let i = 0; i < nums.length; i++) {
-    let start = i + 1
-    let end = nums.length - 1
+    let left = i + 1
+    let right = nums.length - 1
 
-    while (start < end) {
-      let sum = nums[start] + nums[end] + nums[i]
+    while (left < right) {
+      let sum = nums[left] + nums[right] + nums[i]
+      let currAbs = Math.abs(sum - target)
 
-      if (Math.abs(sum - target) < abs) {
+      if (currAbs < abs) {
         res = sum
-        abs = Math.abs(sum - target)
+        abs = currAbs
       }
 
       if (sum > target) {
-        end--
+        right--
       } else if (sum < target) {
-        start++
+        left++
       } else {
         return res
       }

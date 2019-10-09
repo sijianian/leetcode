@@ -53,16 +53,19 @@ const maxArea1 = height => {
 // 双指针法
 const maxArea = height => {
   let maxArea = 0
-  let l = 0
-  let r = height.length - 1
+  let left = 0
+  let right = height.length - 1
 
-  while (l < r) {
-    maxArea = Math.max(maxArea, Math.min(height[l], height[r]) * (r - l))
+  for (let i = 0; i < height.length; i++) {
+    maxArea = Math.max(
+      maxArea,
+      Math.min(height[left], height[right]) * (right - left)
+    )
 
-    if (height[l] < height[r]) {
-      l++
+    if (height[left] < height[right]) {
+      left++
     } else {
-      r--
+      right--
     }
   }
 
