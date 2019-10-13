@@ -7,36 +7,24 @@
  * @param {number} n
  * @return {string[]}
  */
-//TODO:
 const generateParenthesis = n => {
-  const arr = []
-  const compose = (left, right, str) => {
-    if (!left && !right && str.length) {
-      return arr.push(str)
+  const res = []
+  const fn = (str, l, r) => {
+    if (l === n && r === n) {
+      res.push(str)
+      return
     }
 
-    if (left) {
-      compose(
-        left - 1,
-        right,
-        str + '('
-      )
+    if (l < n) {
+      fn(`${str}(`, l + 1, r)
     }
 
-    if (right > left) {
-      compose(
-        left,
-        right - 1,
-        str + ')'
-      )
+    if (l > r) {
+      fn(`${str})`, l, r + 1)
     }
   }
 
-  compose(
-    n,
-    n,
-    ''
-  )
+  fn('', 0, 0)
 
-  return arr
+  return res
 }

@@ -56,8 +56,11 @@ const maxArea = height => {
   let left = 0
   let right = height.length - 1
 
-  while (left < right) {
-    maxArea = Math.max(maxArea, Math.min(height[left], height[right]) * (right - left))
+  for (let i = 0; i < height.length; i++) {
+    maxArea = Math.max(
+      maxArea,
+      Math.min(height[left], height[right]) * (right - left)
+    )
 
     if (height[left] < height[right]) {
       left++

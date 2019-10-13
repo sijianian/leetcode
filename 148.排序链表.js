@@ -41,19 +41,21 @@
  * @return {ListNode}
  */
 const merge = (h1, h2) => {
-  const dummy = {}
-  let cur = dummy
-
-  while (h1 && h2) {
-    h1.val < h2.val
-      ? ((cur.next = h1), (h1 = h1.next))
-      : ((cur.next = h2), (h2 = h2.next))
-    cur = cur.next
+  if (!h1) {
+    return h2
   }
 
-  cur.next = h1 || h2
+  if (!h2) {
+    return h1
+  }
 
-  return dummy.next
+  if (h1.val < h2.val) {
+    h1.next = merge(h1.next, h2)
+    return h1
+  } else {
+    h2.next = merge(h2.next, h1)
+    return h2
+  }
 }
 
 const sortList = head => {
@@ -62,9 +64,9 @@ const sortList = head => {
   }
 
   let slow = head
-  let fast = head.next
+  let fast = head
 
-  while (fast && fast.next) {
+  while (fast && fast.next && fast.next.next) {
     slow = slow.next
     fast = fast.next.next
   }

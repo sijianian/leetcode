@@ -49,16 +49,13 @@
  * @return {number}
  */
 const maxProfit = prices => {
-  let diff = 0
+  let result = 0
 
-  prices &&
-    prices.length &&
-    prices.reduce((acc, next) => {
-      if (next > acc) {
-        diff += next - acc
-      }
-      return next
-    })
+  for(let i = 0; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      result = result + prices[i] - prices[i-1]
+    }
+  }
 
-  return diff
+  return result
 }
