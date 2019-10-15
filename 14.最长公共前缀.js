@@ -40,17 +40,17 @@
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-  if (strs === undefined || strs.length === 0) {
+  if (!strs || strs.length === 0) {
     return ''
   }
 
-  return strs.reduce((prev, next) => {
+  return strs.reduce((pre, next) => {
     let i = 0
 
-    while (prev[i] && next[i] && prev[i] === next[i]) {
+    while (pre[i] && next[i] && pre[i] === next[i]) {
       i++
     }
 
-    return prev.slice(0, i)
+    return pre.slice(0, i)
   })
 }
