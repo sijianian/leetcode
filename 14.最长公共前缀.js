@@ -39,7 +39,7 @@
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonPrefix = function(strs) {
+const longestCommonPrefix = strs => {
   if (!strs || strs.length === 0) {
     return ''
   }
