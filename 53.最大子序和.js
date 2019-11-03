@@ -32,16 +32,18 @@
  * @return {number}
  */
 const maxSubArray = (nums = []) => {
-  const len = nums.length
-  let max = nums[0]
+  let ans = nums[0]
+  let sum = 0
 
-  for (let i = 1; i < len; i++) {
-    nums[i] = Math.max(0, nums[i - 1]) + nums[i]
-
-    if (nums[i] > max) {
-      max = nums[i]
+  for(const num of nums) {
+    if (sum > 0) {
+      sum += num
+    } else {
+      sum = num
     }
+
+    ans = Math.max(ans, sum)
   }
 
-  return max
+  return ans
 }
