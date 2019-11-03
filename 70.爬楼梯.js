@@ -53,3 +53,31 @@ const climbStairs = (n, hash = {}) => {
 
   return hash[n]
 }
+
+// 动态规划
+const climbStairs2 = () => {
+  if (n <= 2) {
+    return n
+  }
+
+  let a = 1
+  let b = 2
+  let temp
+
+  for (let i = 3; i <= n; i++) {
+    temp = a + b
+    a = b
+    b = temp
+  }
+
+  return temp
+}
+
+// 尾递归
+const climbStairs3 = (n, a = 1, b = 2) => {
+  if (n <= 1) {
+    return a
+  }
+
+  return climbStairs(n - 1, b, a + b)
+}
