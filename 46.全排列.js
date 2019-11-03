@@ -32,9 +32,9 @@
 
 // @lc code=start
 
-const backtrack = (list, tempList, nums) => {
+const backtrack = (result, tempList, nums) => {
   if (tempList.length === nums.length) {
-    return list.push([...tempList])
+    return result.push([...tempList])
   }
 
   for (let i = 0; i < nums.length; i++) {
@@ -43,7 +43,7 @@ const backtrack = (list, tempList, nums) => {
     }
 
     tempList.push(nums[i])
-    backtrack(list, tempList, nums)
+    backtrack(result, tempList, nums)
     tempList.pop()
   }
 }
@@ -53,10 +53,10 @@ const backtrack = (list, tempList, nums) => {
  * @return {number[][]}
  */
 const permute = nums => {
-  const list = []
+  const result = []
 
-  backtrack(list, [], nums)
+  backtrack(result, [], nums)
 
-  return list
+  return result
 }
 // @lc code=end
