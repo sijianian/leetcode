@@ -35,14 +35,14 @@ const maxSubArray = (nums = []) => {
   let ans = nums[0]
   let sum = 0
 
-  for(const num of nums) {
+  for (const item of nums) {
     if (sum > 0) {
-      sum += num
+      sum += item
     } else {
-      sum = num
+      sum = item
     }
 
-    ans = Math.max(ans, sum)
+    ans = Math.max(sum, ans)
   }
 
   return ans
