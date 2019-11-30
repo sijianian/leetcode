@@ -85,18 +85,18 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
-const getIntersectionNode = (headA, headB) => {
+const getIntersectionNode = function(headA, headB) {
   if (!headA || !headB) {
     return null
   }
 
-  let curA = headA
-  let curB = headB
+  let currA = headA
+  let currB = headB
 
-  while (curA !== curB) {
-    curA = curA === null ? headB : curA.next
-    curB = curB === null ? headA : curB.next
+  while (currA !== currB) {
+    currA = currA === null ? headB : currA.next
+    currB = currB === null ? headA : currB.next
   }
 
-  return curA
+  return currA
 }
