@@ -38,7 +38,7 @@
 /**
  * initialize your data structure here.
  */
-var MinStack = function() {
+const MinStack = function() {
   this.minStack = []
   this.container = []
 }
