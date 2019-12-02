@@ -70,7 +70,9 @@ const isValid = s => {
     if (str in map) {
       stack.push(str)
     } else {
-      if (str !== map[stack.pop()]) {
+      const curr = map[stack.pop()]
+
+      if (str !== curr) {
         return false
       }
     }
