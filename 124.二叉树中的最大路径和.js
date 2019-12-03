@@ -53,7 +53,7 @@
  * @return {number}
  */
 const maxPathSum = root => {
-  let max = -Number.MAX_VALUE
+  let max = Math.pow(-2, 31)
 
   const getMaxSum = node => {
     if (!node) {
