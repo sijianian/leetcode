@@ -38,18 +38,18 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-const plusOne = (digits, idx = digits.length - 1) => {
-  if (digits[idx] === 9) {
-    digits[idx] = 0
+const plusOne = function(digits, index = digits.length - 1) {
+  if (digits[index] === 9) {
+    digits[index] = 0
 
-    if (idx <= 0) {
+    if (index <= 0) {
       return [1, ...digits]
     } else {
-      return plusOne(digits, idx - 1)
+      return plusOne(digits, index - 1)
     }
   }
 
-  digits[idx]++
+  digits[index]++
 
   return digits
 }
