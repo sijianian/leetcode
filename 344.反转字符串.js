@@ -33,8 +33,24 @@
  * 输出：["h","a","n","n","a","H"]
  *
  */
-/**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
- */
-const reverseString = s => s.reverse()
+
+// js api 解法
+const reverseString1 = s => s.reverse()
+
+// 双指针解法
+const swap = (v, i, j) => {
+  let temp = v[i]
+  v[i] = v[j]
+  v[j] = temp
+}
+
+const reverseString = s => {
+  let left = 0
+  let right = s.length - 1
+
+  while (left < right) {
+    swap(s, left, right)
+    left++
+    right--
+  }
+}

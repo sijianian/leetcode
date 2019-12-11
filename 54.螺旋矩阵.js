@@ -46,13 +46,18 @@
  */
 
 // TODO:
-var spiralOrder = function(matrix) {
+const spiralOrder = function(matrix) {
   if (!matrix.length) {
     return []
   }
 
   const res = []
-  const dirs = [[0, 1], [1, 0], [0, -1], [-1, 0]]
+  const dirs = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0]
+  ]
   const range = [matrix[0].length, matrix.length - 1]
 
   let d = 0
