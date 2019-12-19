@@ -47,7 +47,16 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const rotate = (nums, k) => {
+  let temp
+  let prev
+
   for (let i = 0; i < k; i++) {
-    nums.unshift(nums.pop())
+    prev = nums[nums.length - 1]
+
+    for (let j = 0; j < nums.length; j++) {
+      temp = nums[j]
+      nums[j] = prev
+      prev = temp
+    }
   }
 }
