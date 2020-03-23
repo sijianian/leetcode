@@ -38,12 +38,25 @@
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function(nums1, m, nums2, n) {
-  while (n > 0) {
-    if (nums1[m - 1] >= nums2[n - 1]) {
-      nums1[n + m - 1] = nums1[--m]
+const merge = function(nums1, m, nums2, n) {
+  let current = m + n - 1
+
+  while (current >= 0) {
+    if (n === 0) {
+      return
+    }
+
+    if (nums1[m - 1] > nums2[n - 1]) {
+      nums1[current--] = nums1[--m]
     } else {
-      nums1[n + m - 1] = nums2[--n]
+      nums1[current--] = nums2[--n]
     }
   }
 }
+
+/**
+ * 复杂度分析：
+ *
+ * 时间复杂度：O(M + N)
+ * 空间复杂度：O(1)
+ */

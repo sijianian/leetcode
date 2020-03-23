@@ -43,13 +43,18 @@ const maxProfit = prices => {
   let min = prices[0]
   let result = 0
 
-  for(let i = 0; i < prices.length; i++) {
+  for (let i = 0; i < prices.length; i++) {
     if (prices[i] > prices[i - 1]) {
       result = Math.max(result, prices[i] - min)
     } else {
-      min =Math.min(min, prices[i])
+      min = Math.min(min, prices[i])
     }
   }
 
   return result
 }
+
+/**
+ * 时间复杂度：O(n) 只需要遍历一次
+ * 空间复杂度：O(1) 值使用了常数个变量
+ */
