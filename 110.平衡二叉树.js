@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode.cn id=110 lang=javascript
  *
- * [110] 平衡二叉树
+ * [110] 平衡二叉树 https://leetcode-cn.com/problems/balanced-binary-tree/
  */
 /**
  * Definition for a binary tree node.
@@ -14,11 +14,11 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const isBalanced = root => {
+const isBalanced = (root) => {
   return balanced(root) !== -1
 }
 
-const balanced = node => {
+const balanced = (node) => {
   if (!node) {
     return 0
   }
