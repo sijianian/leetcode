@@ -35,7 +35,7 @@ const threeSumClosest = (nums, target) => {
   let res = nums[0] + nums[1] + nums[2]
   let abs = Math.abs(res - target)
 
-  for (let i = 0; i < nums.length; i++) {
+  for (let i = 0; i < nums.length - 2; i++) {
     let left = i + 1
     let right = nums.length - 1
 
@@ -59,4 +59,4 @@ const threeSumClosest = (nums, target) => {
   }
 
   return res
-}// @lc code=end
+} // @lc code=end
