@@ -36,10 +36,14 @@
  *
  */
 /**
+ * 时间复杂度：O(n) 只需要遍历一次
+ * 空间复杂度：O(1) 值使用了常数个变量
+ */
+/**
  * @param {number[]} prices
  * @return {number}
  */
-const maxProfit = prices => {
+const maxProfit = (prices) => {
   let min = prices[0]
   let result = 0
 
@@ -53,8 +57,3 @@ const maxProfit = prices => {
 
   return result
 }
-
-/**
- * 时间复杂度：O(n) 只需要遍历一次
- * 空间复杂度：O(1) 值使用了常数个变量
- */
