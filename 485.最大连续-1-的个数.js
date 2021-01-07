@@ -37,14 +37,14 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findMaxConsecutiveOnes = function(nums) {
-  let max = 0
+const findMaxConsecutiveOnes = function (nums) {
   let curr = 0
+  let max = 0
 
-  for (let k of nums) {
-    max = Math.max(max, (curr += k))
-
-    if (!k) {
+  for (let k = 0; k < nums.length; k++) {
+    if (nums[k] === 1) {
+      max = Math.max(max, ++curr)
+    } else {
       curr = 0
     }
   }
