@@ -66,16 +66,16 @@
  * @return {number}
  * @description 快慢指针解法
  */
-const removeElement = function(nums, val) {
-  let k = 0
+const removeElement = function (nums, val) {
+  let slow = 0
 
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] !== val) {
-      nums[k] = nums[i]
-      k++
+  for (let quick = 0; quick < nums.length; quick++) {
+    if (nums[quick] !== val) {
+      nums[slow] = nums[quick]
+      slow++
     }
   }
 
-  return k
+  return slow
 }
 // @lc code=end
