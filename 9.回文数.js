@@ -44,9 +44,4 @@
  * @param {number} x
  * @return {boolean}
  */
-const isPalindrome = x =>
-  String(x) ===
-  String(x)
-    .split('')
-    .reverse()
-    .join('')
+const isPalindrome = x => String(x) === String(x).split('').reverse().join('')

@@ -38,7 +38,7 @@
 /**
  * initialize your data structure here.
  */
-const MinStack = function() {
+const MinStack = function () {
   this.minStack = []
   this.container = []
 }
@@ -47,7 +47,7 @@ const MinStack = function() {
  * @param {number} x
  * @return {void}
  */
-MinStack.prototype.push = function(x) {
+MinStack.prototype.push = function (x) {
   this.container.push(x)
 
   if (
@@ -61,7 +61,7 @@ MinStack.prototype.push = function(x) {
 /**
  * @return {void}
  */
-MinStack.prototype.pop = function() {
+MinStack.prototype.pop = function () {
   let x = this.container.pop()
 
   if (x === this.minStack[this.minStack.length - 1]) {
@@ -72,14 +72,14 @@ MinStack.prototype.pop = function() {
 /**
  * @return {number}
  */
-MinStack.prototype.top = function() {
+MinStack.prototype.top = function () {
   return this.container[this.container.length - 1]
 }
 
 /**
  * @return {number}
  */
-MinStack.prototype.getMin = function() {
+MinStack.prototype.getMin = function () {
   return this.minStack[this.minStack.length - 1]
 }
 

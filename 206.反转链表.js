@@ -43,7 +43,7 @@ const reverseList = head => {
   let pre = null
   let next = null
 
-  while(head !== null) {
+  while (head !== null) {
     next = head.next
     head.next = pre
     pre = head

@@ -46,7 +46,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findPeakElement = function(nums) {
+const findPeakElement = function (nums) {
   let left = 0
   let right = nums.length - 1
 

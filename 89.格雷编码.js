@@ -52,7 +52,7 @@
  * @return {number[]}
  */
 // TODO:
-var grayCode = function(n) {
+var grayCode = function (n) {
   if (n === 0) {
     return [0]
   }

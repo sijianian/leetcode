@@ -67,14 +67,14 @@
  * }
  */
 
-const successor = (node) => {
+const successor = node => {
   node = node.right
   while (node.left) {
     node = node.left
   }
   return node.val
 }
-const predecessor = (node) => {
+const predecessor = node => {
   node = node.left
   while (node.right) {
     node = node.right

@@ -50,7 +50,7 @@
  */
 // TODO:
 // @lc code=start
-const getFactorial = function(n) {
+const getFactorial = function (n) {
   if (n === 1) {
     return n
   } else if (n > 1) {
@@ -63,7 +63,7 @@ const getFactorial = function(n) {
  * @param {number} k
  * @return {string}
  */
-const getPermutation = function(n, k) {
+const getPermutation = function (n, k) {
   let res = []
   let arr = []
 

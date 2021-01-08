@@ -38,13 +38,15 @@
  * @return {boolean}
  */
 const containsDuplicate = nums => {
-  const countMap = {}
+  const map = {}
 
-  return nums.some(item => {
-    if (countMap[item]) {
-      return true
+  for (let item of nums) {
+    if (!(item in map)) {
+      map[item] = true
     } else {
-      countMap[item] = true
+      return true
     }
-  })
+  }
+
+  return false
 }

@@ -52,7 +52,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const dominantIndex = function(nums) {
+const dominantIndex = function (nums) {
   let maxIndex = 0
 
   for (let i = 0; i < nums.length; i++) {

@@ -14,11 +14,11 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const isBalanced = (root) => {
+const isBalanced = root => {
   return balanced(root) !== -1
 }
 
-const balanced = (node) => {
+const balanced = node => {
   if (!node) {
     return 0
   }

@@ -49,7 +49,7 @@
  * @param {number} n
  * @return {number}
  */
-const myPow = function(x, n) {
+const myPow = function (x, n) {
   if (n === 0) return 1
 
   let pow = Math.abs(n)

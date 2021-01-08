@@ -57,12 +57,12 @@
  * Initialize your data structure here.
  */
 
-let Node = function(val) {
+let Node = function (val) {
   this.val = val
   this.next = null
 }
 
-let MyLinkedList = function() {
+let MyLinkedList = function () {
   this.head = null
   this.tail = null
   this.size = 0
@@ -73,7 +73,7 @@ let MyLinkedList = function() {
  * @param {number} index
  * @return {number}
  */
-MyLinkedList.prototype.get = function(index) {
+MyLinkedList.prototype.get = function (index) {
   if (this.size === 0 || index > this.size - 1 || index < 0) {
     return -1
   }
@@ -92,7 +92,7 @@ MyLinkedList.prototype.get = function(index) {
  * @param {number} val
  * @return {void}
  */
-MyLinkedList.prototype.addAtHead = function(val) {
+MyLinkedList.prototype.addAtHead = function (val) {
   const newNode = new Node(val)
 
   if (!this.head) {
@@ -113,7 +113,7 @@ MyLinkedList.prototype.addAtHead = function(val) {
  * @param {number} val
  * @return {void}
  */
-MyLinkedList.prototype.addAtTail = function(val) {
+MyLinkedList.prototype.addAtTail = function (val) {
   const newNode = new Node(val)
 
   if (!this.head) {
@@ -135,7 +135,7 @@ MyLinkedList.prototype.addAtTail = function(val) {
  * @param {number} val
  * @return {void}
  */
-MyLinkedList.prototype.addAtIndex = function(index, val) {
+MyLinkedList.prototype.addAtIndex = function (index, val) {
   const newNode = new Node(val)
 
   if (index > this.size) {
@@ -168,7 +168,7 @@ MyLinkedList.prototype.addAtIndex = function(index, val) {
  * @param {number} index
  * @return {void}
  */
-MyLinkedList.prototype.deleteAtIndex = function(index) {
+MyLinkedList.prototype.deleteAtIndex = function (index) {
   if (index >= this.size || index < 0) return
   if (index === 0) {
     this.head = this.head.next

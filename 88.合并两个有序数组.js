@@ -38,7 +38,7 @@
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-const merge = function(nums1, m, nums2, n) {
+const merge = function (nums1, m, nums2, n) {
   let current = m + n - 1
 
   while (current >= 0) {

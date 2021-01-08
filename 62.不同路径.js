@@ -49,7 +49,7 @@
  * @param {number} n
  * @return {number}
  */
-var uniquePaths = function(m, n) {
+var uniquePaths = function (m, n) {
   const dp = []
 
   for (let i = 0; i < m + 1; i++) {

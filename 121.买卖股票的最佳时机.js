@@ -43,7 +43,7 @@
  * @param {number[]} prices
  * @return {number}
  */
-const maxProfit = (prices) => {
+const maxProfit = prices => {
   let min = prices[0]
   let result = 0
 

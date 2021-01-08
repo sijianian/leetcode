@@ -85,7 +85,7 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
-const getIntersectionNode = function(headA, headB) {
+const getIntersectionNode = function (headA, headB) {
   if (!headA || !headB) {
     return null
   }

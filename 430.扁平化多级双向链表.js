@@ -64,7 +64,7 @@
  * @param {Node} head
  * @return {Node}
  */
-const flatten = function(head) {
+const flatten = function (head) {
   const arr = []
   const helper = node => {
     if (!node) return

@@ -38,7 +38,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const swapPairs = function(head) {
+const swapPairs = function (head) {
   if (!head || !head.next) {
     return head
   }

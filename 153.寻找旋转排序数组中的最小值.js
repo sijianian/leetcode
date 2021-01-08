@@ -38,7 +38,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const findMin = function(nums) {
+const findMin = function (nums) {
   // let left = 0
   // let right = nums.length - 1
 

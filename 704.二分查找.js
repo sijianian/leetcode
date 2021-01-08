@@ -49,7 +49,7 @@
  * @param {number} target
  * @return {number}
  */
-const search = function(nums, target) {
+const search = function (nums, target) {
   let pivot
   let left = 0
   let right = nums.length

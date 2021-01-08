@@ -14,7 +14,7 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
-const sortedArrayToBST = function(nums) {
+const sortedArrayToBST = function (nums) {
   if (nums.length === 0) {
     return null
   }

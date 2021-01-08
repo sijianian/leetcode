@@ -69,7 +69,7 @@
 const detectCycle = head => {
   const map = new WeakMap()
 
-  while(head) {
+  while (head) {
     map.set(head, true)
     head = head.next
 

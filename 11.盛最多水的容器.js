@@ -38,7 +38,7 @@
  */
 
 // 暴力法
-const maxArea1 = (height) => {
+const maxArea1 = height => {
   let maxArea = 0
 
   for (let i = 0; i < height.length; i++) {
@@ -51,15 +51,16 @@ const maxArea1 = (height) => {
 }
 
 // 双指针法
-const maxArea = (height) => {
-  let maxArea = 0
+const maxArea = height => {
+  let area = 0
+
   let left = 0
   let right = height.length - 1
 
   while (left < right) {
-    let currArea = Math.min(height[left], height[right]) * (right - left)
+    const currArea = Math.min(height[left], height[right]) * (right - left)
 
-    maxArea = Math.max(maxArea, currArea)
+    area = Math.max(area, currArea)
 
     if (height[left] < height[right]) {
       left++
@@ -68,6 +69,6 @@ const maxArea = (height) => {
     }
   }
 
-  return maxArea
+  return area
 }
 // @lc code=end

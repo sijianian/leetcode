@@ -46,7 +46,7 @@
  */
 
 // TODO:
-const spiralOrder = function(matrix) {
+const spiralOrder = function (matrix) {
   if (!matrix.length) {
     return []
   }
@@ -56,7 +56,7 @@ const spiralOrder = function(matrix) {
     [0, 1],
     [1, 0],
     [0, -1],
-    [-1, 0]
+    [-1, 0],
   ]
   const range = [matrix[0].length, matrix.length - 1]
 

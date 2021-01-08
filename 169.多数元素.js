@@ -35,7 +35,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const majorityElement = function(nums) {
+const majorityElement = function (nums) {
   var obj = {}
 
   for (var i = 0; i < nums.length; i++) {

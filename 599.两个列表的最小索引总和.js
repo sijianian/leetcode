@@ -53,7 +53,7 @@
  * @param {string[]} list2
  * @return {string[]}
  */
-const findRestaurant = function(list1, list2) {
+const findRestaurant = function (list1, list2) {
   let out = []
   let obj = new Map()
 

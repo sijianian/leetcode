@@ -35,7 +35,7 @@ const titleToNumber = s => {
     'W',
     'X',
     'Y',
-    'Z'
+    'Z',
   ]
 
   let res = 0

@@ -54,7 +54,7 @@
  */
 
 // TODO:
-var reverseBits = function(n) {
+var reverseBits = function (n) {
   var result = 0
   var count = 32
 

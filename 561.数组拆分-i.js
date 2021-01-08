@@ -39,7 +39,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const arrayPairSum = function(nums) {
+const arrayPairSum = function (nums) {
   return nums
     .sort((a, b) => a - b)
     .filter((x, index) => index % 2 === 0)

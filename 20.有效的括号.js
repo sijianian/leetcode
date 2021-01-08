@@ -62,7 +62,7 @@ const isValid = s => {
   const map = {
     '(': ')',
     '[': ']',
-    '{': '}'
+    '{': '}',
   }
   const stack = []
 

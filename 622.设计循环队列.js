@@ -73,7 +73,7 @@
  * Initialize your data structure here. Set the size of the queue to be k.
  * @param {number} k
  */
-const MyCircularQueue = function(k) {
+const MyCircularQueue = function (k) {
   this.storage = []
   this.currentSize = 0
   this.maxSize = k
@@ -81,7 +81,7 @@ const MyCircularQueue = function(k) {
   this.rear = -1
 }
 
-MyCircularQueue.prototype.enQueue = function(value) {
+MyCircularQueue.prototype.enQueue = function (value) {
   if (this.currentSize >= this.maxSize) {
     return false
   }
@@ -93,7 +93,7 @@ MyCircularQueue.prototype.enQueue = function(value) {
   return true
 }
 
-MyCircularQueue.prototype.deQueue = function() {
+MyCircularQueue.prototype.deQueue = function () {
   if (this.currentSize === 0) {
     return false
   }
@@ -104,19 +104,19 @@ MyCircularQueue.prototype.deQueue = function() {
   return true
 }
 
-MyCircularQueue.prototype.Front = function() {
+MyCircularQueue.prototype.Front = function () {
   return this.currentSize === 0 ? -1 : this.storage[this.front]
 }
 
-MyCircularQueue.prototype.Rear = function() {
+MyCircularQueue.prototype.Rear = function () {
   return this.currentSize === 0 ? -1 : this.storage[this.rear]
 }
 
-MyCircularQueue.prototype.isEmpty = function() {
+MyCircularQueue.prototype.isEmpty = function () {
   return this.currentSize === 0
 }
 
-MyCircularQueue.prototype.isFull = function() {
+MyCircularQueue.prototype.isFull = function () {
   return this.currentSize === this.maxSize
 }
 // @lc code=end

@@ -33,19 +33,19 @@ const threeSumClosest = (nums, target) => {
   nums.sort((a, b) => a - b)
 
   let res = nums[0] + nums[1] + nums[2]
-  let abs = Math.abs(res - target)
+  let abs = Math.abs(target - res)
 
   for (let i = 0; i < nums.length - 2; i++) {
     let left = i + 1
     let right = nums.length - 1
 
     while (left < right) {
-      let sum = nums[left] + nums[right] + nums[i]
-      let currAbs = Math.abs(sum - target)
+      const sum = nums[i] + nums[left] + nums[right]
+      const currAbs = Math.abs(target - sum)
 
       if (currAbs < abs) {
-        res = sum
         abs = currAbs
+        res = sum
       }
 
       if (sum > target) {

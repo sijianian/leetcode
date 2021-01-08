@@ -46,5 +46,5 @@
  * @param {number[]} nums
  * @return {number}
  */
-var findMin = function(nums) {}
+var findMin = function (nums) {}
 // @lc code=end

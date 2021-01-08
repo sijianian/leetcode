@@ -58,7 +58,7 @@
  */
 
 // TODO:
-const findClosestElements = function(arr, k, x) {
+const findClosestElements = function (arr, k, x) {
   arr = arr.sort((a, b) => a - b)
 }
 // @lc code=end

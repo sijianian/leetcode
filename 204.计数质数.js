@@ -28,7 +28,7 @@
  * @return {number}
  */
 //TODO:
-const countPrimes = function(n) {
+const countPrimes = function (n) {
   let count = 0
   let signs = []
 

@@ -38,7 +38,7 @@
  * @param {number[]} digits
  * @return {number[]}
  */
-const plusOne = function(digits, index = digits.length - 1) {
+const plusOne = function (digits, index = digits.length - 1) {
   if (digits[index] === 9) {
     digits[index] = 0
 

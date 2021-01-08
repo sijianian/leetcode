@@ -47,7 +47,7 @@ const reverse = x => {
   let str = x.toString().split('').reverse().join('')
   let num = parseInt(x < 0 ? `-${str}` : str)
 
-  if (num > (Math.pow(2, 31) - 1) || num < Math.pow(-2, 31)) {
+  if (num > Math.pow(2, 31) - 1 || num < Math.pow(-2, 31)) {
     return 0
   }
 

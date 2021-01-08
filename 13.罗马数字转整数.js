@@ -78,10 +78,10 @@ const map = {
   L: 50,
   C: 100,
   D: 500,
-  M: 1000
+  M: 1000,
 }
 
-const romanToInt = function(s) {
+const romanToInt = function (s) {
   let value = 0
 
   for (let i = 0; i < s.length; i++) {

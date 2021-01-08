@@ -34,7 +34,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const minSubArrayLen = function(s, nums) {
+const minSubArrayLen = function (s, nums) {
   let min = Infinity
   let left = 0
   let sum = 0

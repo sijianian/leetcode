@@ -58,7 +58,7 @@ const mergeTwoLists = (l1, l2) => {
   }
 }
 
-const mergeKLists = function(lists) {
+const mergeKLists = function (lists) {
   if (lists.length === 0) {
     return null
   }

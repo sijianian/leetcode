@@ -48,7 +48,7 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
-var levelOrderBottom = function(root) {
+var levelOrderBottom = function (root) {
   if (root == null) {
     return []
   }
@@ -63,7 +63,7 @@ var levelOrderBottom = function(root) {
     while (size > 0) {
       let current = queue.shift() /* remove and capture next item from queue */
       level.push([
-        current.val
+        current.val,
       ]) /* add the current val to the current level array */
 
       /* if we have a left or right subtree, explore */

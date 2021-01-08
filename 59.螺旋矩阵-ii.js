@@ -32,7 +32,7 @@
  * @param {number} n
  * @return {number[][]}
  */
-TODO: var generateMatrix = function(n) {
+TODO: var generateMatrix = function (n) {
   if (n == 0) {
     return []
   }

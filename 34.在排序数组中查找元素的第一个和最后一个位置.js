@@ -37,7 +37,7 @@
  * @param {number} target
  * @return {number[]}
  */
-const searchRange = function(nums, target) {
+const searchRange = function (nums, target) {
   const targetRange = [-1, -1]
 
   for (let i = 0; i < nums.length; i++) {

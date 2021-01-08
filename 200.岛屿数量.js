@@ -45,5 +45,5 @@
  * @param {character[][]} grid
  * @return {number}
  */
-var numIslands = function(grid) {}
+var numIslands = function (grid) {}
 // @lc code=end

@@ -32,10 +32,5 @@
 const reverseWords = s =>
   s
     .split(' ')
-    .map(word =>
-      word
-        .split('')
-        .reverse()
-        .join('')
-    )
+    .map(word => word.split('').reverse().join(''))
     .join(' ')

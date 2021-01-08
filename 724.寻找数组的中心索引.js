@@ -53,7 +53,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-const pivotIndex = function(nums) {
+const pivotIndex = function (nums) {
   const sum = nums.reduce((prev, next) => prev + next, 0)
 
   let leftSum = 0

@@ -47,14 +47,13 @@
  *
  */
 
-TODO:
 // @lc code=start
 /**
  * @param {string} s
  * @param {number} numRows
  * @return {string}
  */
-const convert = (s, numRows) => {
+TODO: const convert = (s, numRows) => {
   // return original string if can't zigzag
   if (numRows === 1 || s.length < numRows) {
     return s

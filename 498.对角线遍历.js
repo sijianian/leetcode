@@ -47,7 +47,7 @@
  * @param {number[][]} matrix
  * @return {number[]}
  */
-const findDiagonalOrder = function(matrix) {
+const findDiagonalOrder = function (matrix) {
   if (matrix.length < 1 || matrix[0].length < 1) {
     return []
   }
